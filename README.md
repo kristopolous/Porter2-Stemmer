@@ -1,33 +1,25 @@
-The official javascript implementation of the Porter Stemmer.
-
 # About
 
-There are two reference implementation here, corresponding to two different stemmers by Martin Porter, one being 
-the [original Porter Stemmer from 1980](http://tartarus.org/martin/PorterStemmer/def.txt), covered by PorterStemmer1980.js, 
-and the second corresponding to the [Porter2 stemming algorithm](http://snowball.tartarus.org/algorithms/english/stemmer.html), 
-(rev. July 2005) covered by PorterStemmer2.js.
+This is a candidate for the reference javascript implementation of the [Porter2 stemming algorithm](http://snowball.tartarus.org/algorithms/english/stemmer.html), 
+(rev. July 2005).
 
-These files have also been included in the spec directory for referencing.
+
+There is a second project which covers the [original Porter Stemmer from 1980](http://tartarus.org/martin/PorterStemmer/def.txt), 
+you can find that at the following url: https://github.com/kristopolous/Porter-Stemmer.
+
+The reference has also been included in the spec directory.
 
 # Usage
 
-Both implementations are invoked the same way, `stemmer(<word to stem>)`, returning the stemmed word.
+Include the js file, then run `stemmer(<word to stem>)` to return the stemmed word.
 
-In both implementations, you can get a trace as to what is going on, corresponding to the steps outlined in the papers, by
-provding a second argument of "true" and using one of the browser debug consoles.  
+You can get a trace as to what is going on, corresponding to the steps outlined in the papers, by provding a second argument of "true" 
+and using one of the browser debug consoles. 
 
 For instance, `stemmer("hopefully", true)` will output `1c /^(.*[aeiouy].*)y$/ hopefulli`, telling us that rule 1c was matched
-by that regular expression and as a result, we got hopfulli.
+by that regular expression and as a result, we got hopefulli.
 
 # Status
 
-As of Sept 6, 2012, PorterStemmer1980 is 100% compliant and PorterStemmer2 is 95.21%. 100% complaince of PorterStemmer2 is slated
-for completion by October 6th, 2012.
+As of Oct 22, 2012, PorterStemmer2 is 98.54% compliant.
 
-# Demo
-
-There is a demo available [here](http://qaa.ath.cx/porter_js_demo.html)
-
-# Mailing List
-
-Available over [here](https://groups.google.com/forum/#!forum/js-porter-stemmer).
